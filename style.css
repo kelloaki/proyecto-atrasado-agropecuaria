@@ -1,0 +1,410 @@
+:root{
+    --primario: #66c00b;
+    --secundario: #ffffbb;
+    --opcional: #a9e159;
+    --oscuro: #4eaa03;
+    --negro: black;
+    --claro: #89d631;
+}
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+}
+html{
+    scroll-behavior: smooth;
+}
+img{
+    max-width: 100%;
+}
+
+body{
+    font-family: 'roboto', sans-serif;
+    margin: 0;
+
+}
+
+h1{
+    font-size: 3.5rem;
+    text-align: center;
+}
+h2{
+    font-size: 2.5rem;
+}
+h3{
+    font-size: 2rem;
+}
+p{
+    font-size: 2rem;
+}
+button,
+.boton{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem 3rem;
+    border-radius: 1rem;
+    border: 2px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: var(--secundario);
+    background-color: var(--primario);
+    text-decoration: none;
+}
+.boton:hover{
+    background-color: var(--oscuro);
+}
+button:hover{
+    background-color: var(--oscuro);
+}
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+header{
+    background-color: var(--primario);
+}
+header .imagen-logo{
+    margin: 0;
+}
+.imagen-logo{
+    max-width: 20rem;
+    max-height: 25rem;
+}
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+header a{
+    padding: .5rem 1rem;
+    font-size: 2rem;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--negro) ;
+}
+header a:hover{
+    color: var(--secundario);
+}
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    color: var(--secundario);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#hero button{
+    font-size: 2rem;
+}
+#mision .container{
+    text-align: center;
+    padding: 20rem 1rem;
+}
+.nuestra-mision{
+    color: var(--primario);
+}
+#nuestros-productos{
+    background-color: var(--claro);
+    text-align: center;
+}
+#nuestros-productos .container{
+    padding: 10rem 0rem;
+}
+#nuestros-productos p{
+    display: none;
+}
+#nuestros-productos h2{
+    font-size: 4rem;
+}
+#nuestros-productos .marca{
+    background-position: center center;
+    background-size: cover;
+    padding: 5rem;
+    margin: 2rem;
+    color: var(--secundario);
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+
+}
+.marca:first-child{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/insecticidas.jpg);
+}
+.marca:nth-child(2){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/insecticidasreal.jpg);
+}
+.marca:nth-child(3){
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/herbicidas.jpg);
+}
+.marca:last-child{
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/pilones.jpg);
+}
+#contacto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--oscuro);
+    height: 40vh;
+}
+#contancto h2{
+    font-size: 1rem;
+}
+#contacto button{
+    font-size: 2rem;
+}
+footer{
+    background-color: gray;
+
+}
+footer p{
+    margin: 0;
+    color: var(--opcional);
+    padding: 2rem;
+}
+footer .container{
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+@media (min-width:768px ){ 
+    header{
+        position:fixed;
+        width: 100%;
+    } 
+    header .container{
+        flex-direction: row;
+       justify-content: space-between;
+     }
+     header nav{
+        flex-direction: row;
+        padding-bottom:0 ;
+        padding-right: 2rem;
+
+     } 
+     #mision .container{
+        display: flex;
+        justify-content: space-evenly;
+     }
+     #mision .texto{
+        width: 50%;
+        text-align: initial;
+        padding: 0rem 3rem;
+        max-width: 600px;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 50px;
+     }
+     #mision h2{
+        margin: 0;
+     }
+     #mision .imagen-contenedor{
+        background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+        ,url(imagenes/mision.jpg);
+        background-size: cover;
+        background-position: center center;
+        height: 50rem;
+        width: 400px;      
+     }
+     #nuestros-productos .programas{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1rem;
+     }
+     .mapa-header{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 70vh;
+            color: var(--secundario);
+            background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+            ,url(imagenes/mapaback.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+     }
+     .mapa{
+        margin: 5rem 0rem;
+     }
+     .formulario-submit{
+        display: flex;
+        text-align: center;
+        align-items: stretch;
+     }
+     .formulario-submit .ayuda{
+        background-color: var(--opcional);
+        width: 100%;
+        height: 100%;
+        padding: 215px;
+        border-radius: 10px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    .formulario-submit h4{
+        font-size: 3rem;
+        margin: 1rem;
+    }
+    .controls{
+        text-align: center;
+        background-color:var(--secundario);
+        padding: 1rem;
+        border-radius: 5px;
+        margin: 2rem;
+        border: 2px solid var(--secundario);
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 2rem;
+        color: black;
+    }
+    .formulario-submit p{
+        height: 4rem;
+        text-align: center;
+        font-size: 2rem;
+    }
+    .formulario-submit a{
+        color: white;
+        text-decoration: none;
+    }
+    .formulario-submit .button{
+        width: 70%;
+        border: none;
+        padding: 12px;
+        margin: 6px;
+        font-size: 2rem;
+        text-align: center;
+        color: var(--oscuro);
+    }
+
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem ;
+}
+@media (min-width:768px){
+    .grid{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.grid img{
+    width: 100%;
+}
+/*productos*/
+.producto{
+    background-color: var(--primarioOscuro);
+    padding: 1rem;
+}
+.grafico{
+    min-height: 30rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    grid-column: 1/3;
+}
+.galeria-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 70vh;
+    color: var(--secundario);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/herbicidas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.grafico--camisas{
+    grid-row: 2/3 ;
+    background-image: url(../img/grafico1.jpg);
+}
+.video{
+    grid-column: 1/4;
+}
+/** Cursos **/
+.prod {
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--gris);
+}
+@media (min-width: 768px) {
+    .prod {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 2rem;
+    }
+}
+.prod:last-of-type {
+   border: none;
+}
+.prod__label {
+    font-family: var(--fuenteHeading);
+    font-weight: bold;
+}
+.prod__info {
+    font-weight: normal;
+}
+.prod__label,
+.prod__info {
+    font-size: 2rem;
+}
+.prod__imagen{
+    max-width: 100%;
+    margin-left: 2rem;
+
+}
+.titulo{
+    text-align: center;
+    font-size:3rem;
+}
+#section-fertilizantes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 90vh;
+    color: var(--secundario);
+    background-image: linear-gradient(0deg, rgba(0,0,0,0.5), rgba(0,0,0,0.5))
+    ,url(imagenes/insecticidas.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#nuestros-productos__pagina{
+    background-color: var(--claro);
+    text-align: center;
+}
+#nuestros-productos__pagina .container{
+    padding: 10rem 0rem;
+}
+#nuestros-productos__pagina p{
+    display: none;
+}
+#nuestros-productos__pagina h2{
+    font-size: 4rem;
+}
+#nuestros-productos__pagina .marca{
+    background-position: center center;
+    background-size: cover;
+    padding: 5rem;
+    margin: 2rem;
+    color: var(--secundario);
+    border-radius: 1rem;
+    background-repeat: no-repeat;
+}
